@@ -21,7 +21,6 @@ public interface PedidoRepository extends JpaRepository<Pedido, Long> {
             SELECT p FROM Pedido p
             WHERE p.dataPedido BETWEEN :inicio AND :fim
             """)
-
     List<Pedido> findByDateTime(
     @Param("inicio") LocalDateTime inicio,
     @Param("fim") LocalDateTime fim
